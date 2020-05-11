@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="jquery-3.4.1.min.js"></script>
+  <script src="/components/Calculadora.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/css/bootstrap.css">
+
+  <script>
+    ons.ready(function() {
+      console.log("Onsen UI is ready!");
+    });
+
+    if (ons.platform.isIPhoneX()) {
+      document.documentElement.setAttribute('onsflag-iphonex-portrait', '');
+      document.documentElement.setAttribute('onsflag-iphonex-landscape', '');
+    }
+  </script>
+</head>
+<body>
+
+
+       <div class="container-fluid">
+            <div class="row">
+                  <div class="col-12">
+                    <input type="text" id="telaP" class = "tela" style=" position:absolute; width:185px; height:70px; margin-left:65px;" ></input>
+                  </div>
+                    <div class = "col-12">
+                      <button onclick="Mb()" style="width:40px; height:40; position: absolute; margin-top: 90px; margin-left:60px;">MB</button>
+                      <div class = "col-3">
+                      <button onclick="Limpar()" style="width:40px; height:40; position: absolute; margin-top: 90px; margin-left: 95px; ">C</button>
+                      <button onclick="NumeroP('+')" style="width:40px; height:40; position: absolute; margin-top: 90px; margin-left: 145px; ">+</button>
+                    </div>
+                    <div class = "col-12">
+                      <button onclick="NumeroP(1)" style="width:40px; height:40; position: absolute; margin-top: 130px; margin-left:45px;">1</button>
+                      <div class = "col-3">
+                      <button onclick="NumeroP(2)" style="width:40px; height:40; position: absolute; margin-top: 130px; margin-left: 80px; ">2</button>
+                      <button onclick="NumeroP(3)" style="width:40px; height:40; position: absolute; margin-top: 130px; margin-left: 130px; ">3</button>
+                    </div>
+                    <div class = "col-12">
+                      <button onclick="NumeroP(4)" style="width:40px; height:40; position: absolute; margin-top: 170px; margin-left:30px;">4</button>
+                      <div class = "col-3">
+                      <button onclick="NumeroP(5)" style="width:40px; height:40; position: absolute; margin-top: 170px; margin-left: 65px; ">5</button>
+                      <button onclick="NumeroP(6)" style="width:40px; height:40; position: absolute; margin-top: 170px; margin-left: 115px; ">6</button>
+                    </div>
+                    <div class = "col-12">
+                      <button onclick="NumeroP(7)" style="width:40px; height:40; position: absolute; margin-top: 208px; margin-left:15px;">7</button>
+                      <div class = "col-3">
+                      <button onclick="NumeroP(8)" style="width:40px; height:40; position: absolute; margin-top: 208px; margin-left: 50px; ">8</button>
+                      <button onclick="NumeroP(9)" style="width:40px; height:40; position: absolute; margin-top: 208px; margin-left: 100px; ">9</button>
+                    </div>
+                    <div class = "col-12">
+                      <button onclick="NumeroP(0)" style="width:90px; height:40; position: absolute; margin-top: 250px; margin-left: 50px; ">0</button>
+                      <button onclick="NumeroP('.')" style="width:40px; height:40; position: absolute; margin-top: 250px; margin-left:0px;">,</button>
+                    </div>
+                    <div class = "col-12">
+                        <button onclick="NumeroP('-')" style="width:40px; height:40; position: absolute; margin-top: 90px;   margin-left:150px;">-</button>
+                        <button onclick="NumeroP('*')" style="width:40px; height:40; position: absolute; margin-top: 130px;   margin-left:150px;">X</button>
+                        <button onclick="NumeroP('/')" style="width:40px; height:40; position: absolute; margin-top: 170px;   margin-left:150px;">/</button>
+                        <button onclick="Igual()" style="width:40px; height:70px; position: absolute; margin-top: 210px;   margin-left:150px;">=</button>
+                    </div>
+
+       </div>
+</body>
+</html>
